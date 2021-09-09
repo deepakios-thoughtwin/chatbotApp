@@ -1,0 +1,6 @@
+framework module YMSupport {
+  umbrella header "YMSupport-umbrella.h"
+
+  export *
+  module * { export * }
+}

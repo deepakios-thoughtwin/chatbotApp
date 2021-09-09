@@ -1,0 +1,24 @@
+{
+  "name": "YMSupport",
+  "version": "0.0.1",
+  "summary": "Find unique AI solutions to business issues, grow exponentially and generate new streams of revenue.",
+  "homepage": "http://yellowmessenger.com",
+  "license": "Commercial",
+  "authors": "Yellow Messenger",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source": {
+    "git": ""
+  },
+  "resource_bundles": {
+    "YMResources": [
+      "YMSupport/Media.xcassets",
+      "YMSupport/InboxViews/Overview/Overview.storyboard",
+      "YMSupport/InboxViews/MyChats/MyChats.storyboard"
+    ]
+  },
+  "source_files": "YMSupport/**/*.swift",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}

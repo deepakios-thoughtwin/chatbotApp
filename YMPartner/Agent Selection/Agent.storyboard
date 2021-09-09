@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uup-iF-3fx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Agents-->
+        <scene sceneID="yed-6p-r8u">
+            <objects>
+                <viewController storyboardIdentifier="AgentListViewController" hidesBottomBarWhenPushed="YES" id="uup-iF-3fx" customClass="AgentListViewController" customModule="YMPartner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVi-MT-4qx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xk5-zS-Pwb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="HqR-jd-OwR">
+                                    <rect key="frame" x="0.0" y="129" width="414" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="agentCell" rowHeight="73" id="ijp-hS-Nc3" customClass="AgentTableViewCell" customModule="YMPartner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ijp-hS-Nc3" id="945-30-Z5b">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s4G-KY-pYU">
+                                                    <rect key="frame" x="20" y="11.5" width="374" height="50"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-tl-ehl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Bfz-tl-ehl" secondAttribute="height" multiplier="1:1" id="Lwf-6r-8uC"/>
+                                                                <constraint firstAttribute="width" constant="50" id="SJ0-b9-bpf"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-4w-5wM">
+                                                            <rect key="frame" x="58" y="5" width="316" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4q-Ie-MjK">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="316" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agent support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-37-XF5">
+                                                                    <rect key="frame" x="0.0" y="20.5" width="316" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s4G-KY-pYU" firstAttribute="leading" secondItem="945-30-Z5b" secondAttribute="leading" constant="20" symbolic="YES" id="Gd1-yl-5Jj"/>
+                                                <constraint firstAttribute="trailing" secondItem="s4G-KY-pYU" secondAttribute="trailing" constant="20" symbolic="YES" id="r3Q-n9-odB"/>
+                                                <constraint firstItem="s4G-KY-pYU" firstAttribute="centerY" secondItem="945-30-Z5b" secondAttribute="centerY" id="t1a-m6-bhA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="agentImage" destination="Bfz-tl-ehl" id="mmc-Gj-Rx3"/>
+                                            <outlet property="agentName" destination="F4q-Ie-MjK" id="rCM-lI-vgx"/>
+                                            <outlet property="descriptionLabel" destination="Z60-37-XF5" id="reT-XR-aim"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="uup-iF-3fx" id="ogA-DQ-h9z"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Leg-6n-h8g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xk5-zS-Pwb" firstAttribute="leading" secondItem="Leg-6n-h8g" secondAttribute="leading" id="OjT-R6-YIY"/>
+                            <constraint firstItem="Leg-6n-h8g" firstAttribute="trailing" secondItem="xk5-zS-Pwb" secondAttribute="trailing" id="UWb-jI-da2"/>
+                            <constraint firstItem="xk5-zS-Pwb" firstAttribute="top" secondItem="Leg-6n-h8g" secondAttribute="top" id="ZeM-CI-7pa"/>
+                            <constraint firstItem="Leg-6n-h8g" firstAttribute="bottom" secondItem="xk5-zS-Pwb" secondAttribute="bottom" id="u6g-w0-r00"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Agents" id="vNO-fu-SsA"/>
+                    <connections>
+                        <outlet property="emptyView" destination="sRd-Ze-bXQ" id="cii-IF-lO7"/>
+                        <outlet property="tableView" destination="xk5-zS-Pwb" id="nvd-CW-jRL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nse-Qh-K9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="sRd-Ze-bXQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O9M-dS-eaU">
+                            <rect key="frame" x="20" y="26" width="374" height="198.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptystate-botlist" translatesAutoresizingMaskIntoConstraints="NO" id="wE2-Lu-OnO">
+                                    <rect key="frame" x="113" y="0.0" width="148" height="158"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no agents to show " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEK-wv-Q2J">
+                                    <rect key="frame" x="77" y="178" width="220" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="kPB-GC-14l"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="O9M-dS-eaU" secondAttribute="trailing" constant="20" id="1U9-xk-GdD"/>
+                        <constraint firstItem="O9M-dS-eaU" firstAttribute="leading" secondItem="sRd-Ze-bXQ" secondAttribute="leading" constant="20" id="3Cx-4G-2cR"/>
+                        <constraint firstItem="O9M-dS-eaU" firstAttribute="centerY" secondItem="sRd-Ze-bXQ" secondAttribute="centerY" id="dDs-gC-WFp"/>
+                        <constraint firstItem="O9M-dS-eaU" firstAttribute="centerX" secondItem="sRd-Ze-bXQ" secondAttribute="centerX" id="ywp-54-Dkh"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="863.768115942029" y="73.660714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dSn-YV-w1o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7QE-O2-aTL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gjB-Tv-obO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OCq-hm-gxt">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="uup-iF-3fx" kind="relationship" relationship="rootViewController" id="Mj4-pY-jw8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ns3-ah-bT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46.376811594202906" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="emptystate-botlist" width="148" height="158"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

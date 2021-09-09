@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lAs-X2-UOf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Bot-->
+        <scene sceneID="qQh-kE-owz">
+            <objects>
+                <viewController storyboardIdentifier="BotListViewController" id="lAs-X2-UOf" customClass="BotListViewController" customModule="YMPartner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O06-wL-JeH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x6N-7k-Sqd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Mz3-NM-bpo" userLabel="Footer">
+                                    <rect key="frame" x="0.0" y="129" width="414" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="botCell" rowHeight="73" id="eJz-2D-oyL" customClass="BotSelectionTableViewCell" customModule="YMPartner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eJz-2D-oyL" id="hrw-dI-bhq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TAP-bS-WpT">
+                                                    <rect key="frame" x="20" y="11.5" width="374" height="50"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QlD-lq-EaU" customClass="RoundImageView" customModule="YMPartner" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="QlD-lq-EaU" secondAttribute="height" multiplier="1:1" id="0Tj-m1-qLg"/>
+                                                                <constraint firstAttribute="width" constant="50" id="sz1-Co-bS9"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="RMQ-1X-3G8">
+                                                            <rect key="frame" x="58" y="3.5" width="316" height="43"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bot Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2b-q6-T0v">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="75.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bot description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrP-im-gOL">
+                                                                    <rect key="frame" x="0.0" y="23.5" width="110.5" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="TAP-bS-WpT" secondAttribute="trailing" constant="20" symbolic="YES" id="9jD-st-Wqr"/>
+                                                <constraint firstItem="TAP-bS-WpT" firstAttribute="leading" secondItem="hrw-dI-bhq" secondAttribute="leading" constant="20" symbolic="YES" id="hiu-bE-FMp"/>
+                                                <constraint firstItem="TAP-bS-WpT" firstAttribute="centerY" secondItem="hrw-dI-bhq" secondAttribute="centerY" id="twF-Ax-zGS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="botImage" destination="QlD-lq-EaU" id="FBY-rP-hvv"/>
+                                            <outlet property="descriptionLabel" destination="FrP-im-gOL" id="0ZR-XX-mtn"/>
+                                            <outlet property="nameLabel" destination="c2b-q6-T0v" id="nV2-fg-2py"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="lAs-X2-UOf" id="Xpz-67-YMx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4LT-ZT-J8W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x6N-7k-Sqd" firstAttribute="top" secondItem="4LT-ZT-J8W" secondAttribute="top" id="3Me-bq-3Hi"/>
+                            <constraint firstItem="x6N-7k-Sqd" firstAttribute="leading" secondItem="4LT-ZT-J8W" secondAttribute="leading" id="IUv-RM-198"/>
+                            <constraint firstItem="4LT-ZT-J8W" firstAttribute="trailing" secondItem="x6N-7k-Sqd" secondAttribute="trailing" id="cgA-jt-VWE"/>
+                            <constraint firstItem="4LT-ZT-J8W" firstAttribute="bottom" secondItem="x6N-7k-Sqd" secondAttribute="bottom" id="qrS-6u-P86"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Bot" id="5a4-O9-Viy">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="lfr-G4-iEO">
+                            <connections>
+                                <action selector="saveAction:" destination="lAs-X2-UOf" id="xzC-ln-YHU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emptyView" destination="Xil-F3-eJV" id="9Nn-jN-cfc"/>
+                        <outlet property="tableView" destination="x6N-7k-Sqd" id="9Tz-7O-SYo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUu-E9-vtj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Xil-F3-eJV">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HDD-e0-Vec">
+                            <rect key="frame" x="20" y="15.5" width="374" height="219"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptystate-botlist" translatesAutoresizingMaskIntoConstraints="NO" id="TOW-vW-pPD">
+                                    <rect key="frame" x="113" y="0.0" width="148" height="158"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-Bf-aa0">
+                                    <rect key="frame" x="30.5" y="178" width="313.5" height="41"/>
+                                    <string key="text">There are no bots to show at the moment
+Pull to refresh</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="DAD-IG-i79"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="HDD-e0-Vec" firstAttribute="centerX" secondItem="Xil-F3-eJV" secondAttribute="centerX" id="6S3-MW-3a0"/>
+                        <constraint firstItem="HDD-e0-Vec" firstAttribute="leading" secondItem="Xil-F3-eJV" secondAttribute="leading" constant="20" id="WY2-Ml-den"/>
+                        <constraint firstAttribute="trailing" secondItem="HDD-e0-Vec" secondAttribute="trailing" constant="20" id="Y5v-6Y-ESy"/>
+                        <constraint firstItem="HDD-e0-Vec" firstAttribute="centerY" secondItem="Xil-F3-eJV" secondAttribute="centerY" id="bZd-iK-Taj"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1260.8695652173915" y="14.732142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9bh-rJ-aFm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PyR-yN-yzT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z29-au-7di">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lAs-X2-UOf" kind="relationship" relationship="rootViewController" id="UeZ-lg-zfV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8B-Zl-0rb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350.72463768115944" y="14.732142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="emptystate-botlist" width="148" height="158"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
