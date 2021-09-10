@@ -9,12 +9,13 @@ import UIKit
 import YMSupport
 
 enum AvailabilityStatus: String {
-    case available, busy, away
+    case available, busy, away , offline, dnd
     var color: UIColor {
         switch self {
         case .available: return .systemGreen
         case .busy: return .systemRed
         case .away: return .systemGray
+        default: return .systemGray
         }
     }
 }
@@ -44,7 +45,7 @@ class ProfileViewController: UITableViewController {
         self.present(alertController, animated: true, completion: nil)
     }
 
-    func setAvailibility(_ status: AvailabilityStatus) {
+    func setAvailibility(_ status: AgentModel.Status) {
         availibilityLabel.text = status.rawValue.capitalized
         profileImage.status = status
     }

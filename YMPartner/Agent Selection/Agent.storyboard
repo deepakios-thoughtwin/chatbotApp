@@ -36,13 +36,14 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s4G-KY-pYU">
                                                     <rect key="frame" x="20" y="11.5" width="374" height="50"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-tl-ehl">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sb-xd-BhT" customClass="RoundImageStatusView" customModule="YMPartner" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="Bfz-tl-ehl" secondAttribute="height" multiplier="1:1" id="Lwf-6r-8uC"/>
-                                                                <constraint firstAttribute="width" constant="50" id="SJ0-b9-bpf"/>
+                                                                <constraint firstAttribute="width" secondItem="6sb-xd-BhT" secondAttribute="height" multiplier="1:1" id="RlS-ho-lTD"/>
+                                                                <constraint firstAttribute="width" constant="50" id="zpw-3h-YC2"/>
                                                             </constraints>
-                                                        </imageView>
+                                                        </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-4w-5wM">
                                                             <rect key="frame" x="58" y="5" width="316" height="40"/>
                                                             <subviews>
@@ -70,7 +71,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="agentImage" destination="Bfz-tl-ehl" id="mmc-Gj-Rx3"/>
+                                            <outlet property="agentImage" destination="6sb-xd-BhT" id="s5N-lG-OUE"/>
                                             <outlet property="agentName" destination="F4q-Ie-MjK" id="rCM-lI-vgx"/>
                                             <outlet property="descriptionLabel" destination="Z60-37-XF5" id="reT-XR-aim"/>
                                         </connections>
@@ -108,7 +109,7 @@
                                     <rect key="frame" x="113" y="0.0" width="148" height="158"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no agents to show " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEK-wv-Q2J">
-                                    <rect key="frame" x="77" y="178" width="220" height="20"/>
+                                    <rect key="frame" x="77" y="178" width="220.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                     <nil key="highlightedColor"/>

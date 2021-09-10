@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import YMSupport
 class RoundImageView: UIImageView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -22,9 +22,9 @@ class RoundImageView: UIImageView {
 }
 
 class RoundImageStatusView: UIView {
-    var status = AvailabilityStatus.available {
+    var status = AgentModel.Status.available {
         didSet {
-            statusIndicatorView.backgroundColor = status.color
+          statusIndicatorView.backgroundColor = status.color
         }
     }
 
@@ -48,4 +48,17 @@ class RoundImageStatusView: UIView {
         super.layoutIfNeeded()
         layer.cornerRadius = bounds.width / 2.0
     }
+}
+
+
+extension AgentModel.Status {
+    var color: UIColor {
+        switch self {
+        case .available: return .systemGreen
+        case .busy: return .systemRed
+        case .away: return .systemGray
+        default: return .systemGray
+        }
+    }
+    
 }
