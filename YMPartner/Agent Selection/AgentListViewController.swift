@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import YMSupport
 
 class AgentListViewController: ViewController {
     
@@ -17,38 +18,31 @@ class AgentListViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isTranslucent = false
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
-        
-        
-        self.tableView.dataSource = self // to avoid initial loading
-        self.hideSpinner()
-        self.tableView.refreshControl?.endRefreshing()
-        self.tableView.reloadData()
-        
         viewModel.agentListSubject
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                self?.tableView.dataSource = self // to avoid initial loading
+                self?.tableView.dataSource = self
                 self?.hideSpinner()
                 self?.tableView.refreshControl?.endRefreshing()
                 self?.tableView.reloadData()
             }.store(in: &storage)
-
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        showSpinner()
-//        viewModel.loadBots()
+        showSpinner()
+        viewModel.loadAgents()
     }
 
     @objc func onRefresh(refreshControl: UIRefreshControl) {
-       // viewModel.loadBots()
+        viewModel.loadAgents()
     }
-
-    
 }
+
 extension AgentListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = viewModel.agents.count
@@ -59,25 +53,17 @@ extension AgentListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "agentCell", for: indexPath) as! AgentTableViewCell
         let obj = viewModel.agents[indexPath.row]
-//        cell.agentName.text = obj.model.agent
-//        cell.descriptionLabel.text = obj.model.botDesc
-//        cell.agentImage.image = obj.image
-//
-//        // Show already selected bot
-//        if obj.model.userName == defaults.selectedBotId {
-//            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-//        }
+        cell.agentName.text = obj.model.agentProfile?.name ?? ""
+        cell.descriptionLabel.text = obj.model.agentProfile?.description
+        cell.agentImage.imageView.image = obj.image
+        cell.agentImage.status = obj.model.status ?? .away
         return cell
     }
 }
 
 class AgentTableViewCell: UITableViewCell {
-    @IBOutlet weak var agentImage: UIImageView!
+    @IBOutlet weak var agentImage:RoundImageStatusView!
     @IBOutlet weak var agentName: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        accessoryType = isSelected ? .checkmark : .none
-    }
 }
+
